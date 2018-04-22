@@ -1,0 +1,2 @@
+export const VALIDATE_TOKEN = 'VALIDATE_TOKEN'
+export const REMOVE_USER = 'REMOVE_USER'
