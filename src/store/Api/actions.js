@@ -1,9 +1,6 @@
 import axios from 'axios'
 import { camelCaseKeys, snakeCaseKeys } from 'utils/deepTransformKeys'
-import { REQUEST, SUCCESS, FAILURE } from './types'
 import { isString } from 'lodash'
-import { select } from 'redux-saga/effects'
-import User from 'store/User'
 import Cookie from 'utils/cookie'
 
 const transformResponse = (data) => {
