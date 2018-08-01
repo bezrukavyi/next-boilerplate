@@ -1,9 +1,7 @@
 import Cookie from 'utils/cookie'
-import Path from 'constants/Path'
-import { redirect } from 'utils/redirect'
 import User from 'store/User'
 
-const auth = (next) => async (context) => {
+const userRequest = (next) => async (context) => {
   const { isServer, store } = context
 
   try {
@@ -12,8 +10,8 @@ const auth = (next) => async (context) => {
     store.dispatch(User.actions.insertUser(result.data))
     return next(context)
   } catch(error) {
-    redirect(context)(Path.NotAllowed)
+    return next(context)
   }
 }
 
-export default auth
+export default userRequest

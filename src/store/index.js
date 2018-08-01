@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import withRedux from 'next-redux-wrapper'
 import nextReduxSaga from 'next-redux-saga'
 import createSagaMiddleware from 'redux-saga'

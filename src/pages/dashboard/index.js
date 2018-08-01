@@ -12,4 +12,3 @@ const Page = (props) =>
 Page.getInitialProps = initial([middle.auth])
 
 export default withReduxSaga(Page)
-
